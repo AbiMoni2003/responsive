@@ -13,50 +13,52 @@
 </head>
 <body>
     <header>
-        <h1>Card Layout</h1>
+       <center> <h1>Card Layout</h1></center>
+       <p style="text-align: right;"><i class="fa-duotone fa-solid fa-cart-shopping"></i> <span id="total-price">₹0</span></p>
+        
     </header>
     <section class="section">
         <article>
             <img src="image1.jpg">
            <h2>T-Shirt</h2>
             <p class="description">SHODOX Mens Unique Design Oversized Tshirt for Men</p>
-            <p class="price">₹119</p>
-            <button>Add to Cart</button>
+            <p class="price" >₹119</p>
+            <button onclick="addToCart(119)">Add to Cart</button>
         </article>
         <article>
             <img src="image2.jpg">
            <h2>T-Shirt</h2>
             <p class="description">SHODOX Mens  Unique Design White Tshirt </p>
             <p class="price">₹139</p>
-            <button>Add to Cart</button>
+            <button onclick="addToCart(139)">Add to Cart</button>
         </article>
         <article>
             <img src="image3.jpg">
            <h2>T-Shirt</h2>
             <p class="description">Difference Of Opinion Striped Men Round Neck Green T-shirt</p>
-            <p class="price">₹149</p>
-            <button>Add to Cart</button>
+            <p class="price" >₹149</p>
+            <button onclick="addToCart(149)">Add to Cart</button>
         </article>
         <article>
             <img src="image4.jpg">
            <h2>T-Shirt</h2>
             <p class="description">Difference Of Opinion Striped Men Round Neck Black T-shirt</p>
             <p class="price">₹109</p>
-            <button>Add to Cart</button>
+            <button onclick="addToCart(109)">Add to Cart</button>
         </article>
         <article>
             <img src="image5.jpg">
            <h2>T-Shirt</h2>
             <p class="description">Difference Of Opinion Striped Men Round Neck Black T-shirt</p>
             <p class="price">₹129</p>
-            <button>Add to Cart</button>
+            <button onclick="addToCart(129)">Add to Cart</button>
         </article>
         <article>
             <img src="image6.jpg">
            <h2>T-Shirt</h2>
             <p class="description">Difference Of Opinion Striped Men Blue T-shirt</p>
             <p class="price">₹119</p>
-            <button>Add to Cart</button>
+            <button onclick="addToCart(119)">Add to Cart</button>
         </article>
     </section>
     <footer>
@@ -65,5 +67,13 @@
            <p class="footer-icon"> <a href="https://www.youtube.com/"><i class="fa-brands fa-youtube"></a></i>| <a href="https://www.instagram.com/" > <i class="fa-brands fa-instagram"></a></i> |<a href="https://www.facebook.com/" ><i class="fa-brands fa-facebook"></i></a></i></p>
         </div>
       </footer>
+      <script>
+        let totalPrice = 0;
+
+        function addToCart(price) {
+            totalPrice += price;
+            document.getElementById("total-price").innerText = "₹" + totalPrice;
+        }
+    </script>
 </body>
 </html>
